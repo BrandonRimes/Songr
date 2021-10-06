@@ -21,7 +21,7 @@ public class SongrController {
     SongrRepository songrRepository;
 
     @GetMapping("/hello")
-            public String helloWorldPage(Model m)
+    public String helloWorldPage(Model m)
     {
         m.addAttribute("capitalText", "Hey Y'all!");
         return "hello";
@@ -53,9 +53,11 @@ public class SongrController {
 //        albums.add(vangogh);
 //        albums.add(monet);
 
-        List<Album> albums = songrRepository.findAll();
+//        songrRepository.saveAll(albums);
 
-        m.addAttribute("albums", albums);
+        List<Album> dBalbums = songrRepository.findAll();
+
+        m.addAttribute("albums", dBalbums);
 
         return "albums";
     }

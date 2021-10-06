@@ -14,6 +14,11 @@ public class Album {
     int length;
     String imageUrl;
 
+    protected Album()
+    {
+
+    }
+
     public Album(String title, String artist, int songCount, int length, String imageUrl) {
         this.title = title;
         this.artist = artist;
