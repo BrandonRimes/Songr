@@ -50,6 +50,7 @@ h1::before {
     align-items: center;
     width: 300px;
     height: 75vh;
+    margin: 10px;
 }
 
 .img {
