@@ -18,5 +18,14 @@
             <h3><span th:text="${album.songCount} + ' songs'"></span> - <span th:text="${album.length} + 'minutes'"></span></h3>
         </section>
     </article>
+    <form action="/" method="post">
+        <legend>Add Album</legend>
+        <input type="text" name="artist" placeholder="Artist">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="imageUrl" placeholder="Image URL">
+        <input type="number" name="songCount" placeholder="Song Count">
+        <input type="number" name="length" placeholder="Length in Minutes">
+        <button type="submit">+</button>
+    </form>
 </body>
 </html>
