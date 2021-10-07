@@ -9,12 +9,15 @@
     <title>Songr Albums</title>
 </head>
 <body>
-    <article id="albumsPage">
+    <article id="albumsPage" >
         <section class="album" th:each="album : ${albums}">
             <h2><span th:text="${album.artist}"></span> - <span th:text="${album.title}"></span></h2>
             <div class="img">
                 <img th:src="${album.imageUrl}" alt="${album.imageUrl}">
             </div>
+            <form action="/songs" method="get">
+                <button type="submit">Open</button>
+            </form>
             <h3><span th:text="${album.songCount} + ' songs'"></span> - <span th:text="${album.length} + 'minutes'"></span></h3>
         </section>
     </article>
